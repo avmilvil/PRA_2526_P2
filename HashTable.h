@@ -6,7 +6,7 @@
 #include <string>
 #include "Dict.h"
 #include "TableEntry.h"
-#include "../PRA_2526_P1/ListLinked.h"
+#include "ListLinked.h"
 
 template <typename V>
 class HashTable : public Dict<V> {
