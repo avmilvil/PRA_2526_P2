@@ -20,6 +20,12 @@ class TableEntry{
 		friend bool operator!=(const TableEntry<U> &te1, const TableEntry<U> &te2);
 
 		template <typename U>
+		friend bool operator<(const TableEntry<U> &te1, const TableEntry<U> &te2);
+
+		template <typename U>
+		friend bool operator>(const TableEntry<U> &te1, const TableEntry<U> &te2);
+
+		template <typename U>
 		friend std::ostream& operator<<(std::ostream &out, const TableEntry<U> &te);
 };
 
@@ -31,6 +37,16 @@ bool operator==(const TableEntry<V> &te1, const TableEntry<V> &te2){
 template <typename V>
 bool operator!=(const TableEntry<V> &te1, const TableEntry<V> &te2){
 	return te1.key != te2.key;
+}
+
+template <typename V>
+bool operator<(const TableEntry<V> &te1, const TableEntry<V> &te2){
+	return te1.key < te2.key;
+}
+
+template <typename V>
+bool operator>(const TableEntry<V> &te1, const TableEntry<V> &te2){
+	return te1.key > te2.key;
 }
 
 template <typename V>

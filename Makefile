@@ -10,5 +10,8 @@ bin/testBSTree: testBSTree.cpp BSTree.h BSNode.h
 	mkdir -p bin
 	g++ -o bin/testBSTree testBSTree.cpp
 
+bin/testBSTreeDict: testBSTreeDict.cpp TableEntry.h BSTreeDict.h Dict.h BSNode.h
+	mkdir -p bin
+	g++ -o bin/testBSTreeDict testBSTreeDict.cpp
 clean:
 	rm -rf *.o *.gch bin
