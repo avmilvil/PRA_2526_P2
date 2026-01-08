@@ -1,3 +1,5 @@
+all: bin/testTableEntry bin/testHashTable bin/testBSTree bin/testBSTreeDict
+
 bin/testTableEntry: testTableEntry.cpp TableEntry.h
 	mkdir -p bin
 	g++ -o bin/testTableEntry testTableEntry.cpp
@@ -15,3 +17,9 @@ bin/testBSTreeDict: testBSTreeDict.cpp TableEntry.h BSTreeDict.h Dict.h BSNode.h
 	g++ -o bin/testBSTreeDict testBSTreeDict.cpp
 clean:
 	rm -rf *.o *.gch bin
+
+test: 
+	./bin/testTableEntry
+	./bin/testHashTable
+	./bin/testBSTree
+	./bin/testBSTreeDict
